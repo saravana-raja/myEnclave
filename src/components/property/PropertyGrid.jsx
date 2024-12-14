@@ -8,7 +8,7 @@ export const PropertyGrid = ({ properties, onViewDetails }) => {
         <PropertyCard
           key={property.id}
           property={property}
-          onViewDetails={onViewDetails}
+          onViewDetails={onViewDetails}  // Pass onViewDetails to PropertyCard
         />
       ))}
     </div>

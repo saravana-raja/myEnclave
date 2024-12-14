@@ -4,6 +4,7 @@ import { Building2, Menu } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { MobileMenu } from './MobileMenu';
 
+
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -41,10 +42,10 @@ export const Header = () => {
                 className="inline-flex items-center px-4 py-2 text-sm font-semibold text-white border border-transparent rounded-md shadow-sm bg-[#72ac4f] hover:bg-[#5f9341] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#72ac4f]"
               >
                 List Your Property
-              </a>
+              </a> 
 
-
-            </div>
+  
+           </div>
           </div>
 
           <button 
@@ -63,3 +64,5 @@ export const Header = () => {
     </header>
   );
 };
+
+

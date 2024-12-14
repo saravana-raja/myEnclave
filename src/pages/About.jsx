@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { Building2 } from 'lucide-react';
+import WhatsAppButton from "../components/ui/WhatsAppButton"; // WhatsApp Button Import
 
 const About = () => {
   return (
@@ -36,33 +37,47 @@ const About = () => {
           </div>
         </div>
 
-        <div className="mt-16">
-          <h2 className="text-2xl font-semibold mb-8 text-center">Why Choose Us</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Extensive Network',
-                description: 'Access to thousands of properties and verified owners'
-              },
-              {
-                title: 'Verified Listings',
-                description: 'All properties are verified for authenticity and quality'
-              },
-              {
-                title: 'Expert Support',
-                description: '24/7 support from our experienced team of professionals'
-              }
-            ].map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
-          </div>
+        <div className="mt-16 text-center">
+          <h2 className="text-2xl font-semibold mb-4">Our Additional Services</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            We also specialize in furnishing unfurnished service apartments to meet the diverse needs of tenants. 
+            Whether you own an unfurnished property or are looking for a hassle-free rental, we take care of 
+            everything—from furnishing the space to renting it out, ensuring that your property is ready to go.
+          </p>
         </div>
+
+        {/* Now the "Why Choose Us" section is at the bottom */}
+        <div className="mt-16">
+  <h2 className="text-2xl font-semibold mb-8 text-center">Why Choose Us</h2>
+  <div className="grid md:grid-cols-3 gap-8">
+    {[ 
+      {
+        title: 'Personalized Service',
+        description: 'As a new and dedicated platform, we focus on providing personalized attention to each client, ensuring a tailored experience.'
+      },
+      {
+        title: 'Verified Listings',
+        description: 'We thoroughly verify all properties to ensure quality and authenticity, giving you peace of mind.'
+      },
+      {
+        title: 'Expert Support',
+        description: 'Our passionate team is available to offer expert advice and support throughout your property journey.'
+      }
+    ].map((feature, index) => (
+      <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+        <p className="text-gray-600">{feature.description}</p>
+      </div>
+    ))}
+  </div>
+</div>
+
+             
+            
       </main>
       {/* Footer */}
- <Footer />
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
