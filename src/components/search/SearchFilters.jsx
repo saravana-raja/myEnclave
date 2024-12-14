@@ -59,6 +59,18 @@ export const SearchFilters = ({ filters, onFilterChange }) => {
             Search
           </Button>
         </div>
+
+         
+        
+        {/*<div className="flex items-center space-x-2 md:space-x-4">
+          <Button variant="primary" className="flex-1 flex items-center justify-between px-4 py-2 rounded-lg">
+            <span className="flex-grow text-center">Search</span>
+            <Search className="w-4 h-4 ml-2" />
+          </Button>
+        </div>
+        */}
+
+
       </div>
     </div>
   );

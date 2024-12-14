@@ -28,9 +28,15 @@ export const UserTypeSection = () => {
           </p><p className="text-gray-600">
             Contract from 2 to 10 years
           </p>
-          <button className="mt-4 text-[#72ac4f] font-semibold hover:text-[#5f9341] transition-colors">
-            List Your Property →
-          </button>
+          <a
+  href="https://docs.google.com/forms/d/e/1FAIpQLSdyzU6Q6GQHzx_5fszGKK7MRWMYRM0ZN0IpcAlJRuk9PV1Asw/viewform?usp=dialog"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-4 text-[#72ac4f] font-semibold hover:text-[#5f9341] transition-colors"
+  >
+  List Your Property →
+</a>
+
         </div>
       </div>
 
