@@ -10,7 +10,7 @@ export const SearchFilters = ({ filters, onFilterChange }) => {
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> {/* Adjusted grid for 3 columns */}
         <div className="space-y-2">
           <label className="block text-sm font-medium text-gray-700">Location</label>
           <input
@@ -21,20 +21,6 @@ export const SearchFilters = ({ filters, onFilterChange }) => {
             placeholder="Enter location"
             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-[#72ac4f] focus:border-[#72ac4f]"
           />
-        </div>
-
-        <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-700">Property Type</label>
-          <select
-            name="propertyType"
-            value={filters.propertyType}
-            onChange={handleInputChange}
-            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-[#72ac4f] focus:border-[#72ac4f]"
-          >
-            <option value="">Any</option>
-            <option value="rent">For Rent</option>
-            <option value="sale">For Sale</option>
-          </select>
         </div>
 
         <div className="space-y-2">
@@ -59,18 +45,6 @@ export const SearchFilters = ({ filters, onFilterChange }) => {
             Search
           </Button>
         </div>
-
-         
-        
-        {/*<div className="flex items-center space-x-2 md:space-x-4">
-          <Button variant="primary" className="flex-1 flex items-center justify-between px-4 py-2 rounded-lg">
-            <span className="flex-grow text-center">Search</span>
-            <Search className="w-4 h-4 ml-2" />
-          </Button>
-        </div>
-        */}
-
-
       </div>
     </div>
   );

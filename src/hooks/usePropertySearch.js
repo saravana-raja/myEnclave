@@ -4,7 +4,6 @@ import { getPriceRangeValues } from '../types/filters';
 export const usePropertySearch = (properties) => {
   const [filters, setFilters] = useState({
     location: '',
-    propertyType: '',
     priceRange: '',
   });
 
@@ -16,11 +15,6 @@ export const usePropertySearch = (properties) => {
     return properties.filter(property => {
       // Location filter
       if (filters.location && !property.location.toLowerCase().includes(filters.location.toLowerCase())) {
-        return false;
-      }
-
-      // Property type filter
-      if (filters.propertyType && property.type !== filters.propertyType) {
         return false;
       }
 

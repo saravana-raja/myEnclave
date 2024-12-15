@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Building2, Mail, Phone } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -13,22 +13,8 @@ export const Footer = () => {
               <span className="text-xl font-bold text-white">myEnclave</span>
             </div>
             <p className="text-sm">
-              Your trusted partner in finding the perfect property. Making property management simple and efficient.
+              Your reliable partner for exceptional serviced apartments and seamless property management. Simplifying stays and streamlining ownership effortlessly.
             </p>
-            {/*<div className="flex space-x-4">
-              <a href="#" className="hover:text-[#72ac4f] transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="hover:text-[#72ac4f] transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="hover:text-[#72ac4f] transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="hover:text-[#72ac4f] transition-colors">
-                <Linkedin size={20} />
-              </a>
-            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -44,29 +30,34 @@ export const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
+          <a href="/services">
+         <h3 className="text-lg font-semibold text-white mb-4 hover:text-[#72ac4f] transition-colors">
+         Our Services
+          </h3>
+          </a>
+
+
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-[#72ac4f] transition-colors">Property Listing</a></li>
-              <li><a href="#" className="hover:text-[#72ac4f] transition-colors">Property Management</a></li>
-              <li><a href="#" className="hover:text-[#72ac4f] transition-colors">Rental Services</a></li>
-              <li><a href="#" className="hover:text-[#72ac4f] transition-colors">Lease Services</a></li>
+              <li><a href="/services#serviced-apartments" className="hover:text-[#72ac4f] transition-colors">Serviced Apartments</a></li>
+              <li><a href="/services#property-management" className="hover:text-[#72ac4f] transition-colors">Property Management</a></li>
+              <li><a href="/services#maintenance-repairs" className="hover:text-[#72ac4f] transition-colors">Maintenance and Repairs</a></li>
+              <li><a href="/services#furnishing-staging" className="hover:text-[#72ac4f] transition-colors">Furnishing and Staging</a></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
-            <div className="flex items-center gap-2">
+          <a href="/contact">
+         <h3 className="text-lg font-semibold text-white mb-4 hover:text-[#72ac4f] transition-colors">
+         Contact Us
+          </h3>
+          </a>            <div className="flex items-center gap-2">
               <Mail size={16} className="text-[#72ac4f]" />
               <span>support@myenclave.in</span>
             </div>
             <div className="flex items-center gap-2">
               <Phone size={16} className="text-[#72ac4f]" />
               <span>+91 9787518289</span>
-            </div>
-            <div className="flex items-center gap-2">
-              {/*<MapPin size={16} className="text-[#72ac4f]" />
-              <span>123 Property Street, Real Estate City, 12345</span>*/}
             </div>
           </div>
         </div>
@@ -76,11 +67,6 @@ export const Footer = () => {
             <p className="text-sm">
               © {new Date().getFullYear()} myEnclave. All rights reserved.
             </p>
-            <div className="flex gap-4 mt-4 md:mt-0">
-              <a href="#" className="text-sm hover:text-[#72ac4f] transition-colors">Privacy Policy</a>
-              <a href="#" className="text-sm hover:text-[#72ac4f] transition-colors">Terms of Service</a>
-              <a href="#" className="text-sm hover:text-[#72ac4f] transition-colors">Cookie Policy</a>
-            </div>
           </div>
         </div>
       </div>

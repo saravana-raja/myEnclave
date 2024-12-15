@@ -13,7 +13,7 @@ const About = () => {
           <Building2 className="h-16 w-16 text-[#72ac4f] mx-auto mb-4" />
           <h1 className="text-4xl font-bold mb-4">About myEnclave</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Your trusted partner in finding the perfect property
+            Your trusted partner in premium serviced apartments and seamless property management.
           </p>
         </div>
 
@@ -21,61 +21,66 @@ const About = () => {
           <div>
             <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
             <p className="text-gray-600">
-              At myEnclave, we're committed to revolutionizing the way people find and manage properties. 
-              Our platform connects property owners with potential tenants and buyers, making the process 
-              seamless and efficient.
+              At myEnclave, our mission is to redefine the serviced apartment experience while offering
+              unparalleled property management solutions. We ensure a seamless process for both property
+              owners and tenants.
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl font-semibold mb-4">Our Vision</h2>
             <p className="text-gray-600">
-              We envision a future where finding your dream property or managing your real estate 
-              investments is straightforward and stress-free. Through innovation and dedication, 
-              we're making this vision a reality.
+              We aim to create a future where property ownership and tenancy are effortless and stress-free.
+              Through innovation and dedication, we bring value to every property we manage.
             </p>
           </div>
         </div>
 
         <div className="mt-16 text-center">
-          <h2 className="text-2xl font-semibold mb-4">Our Additional Services</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We also specialize in furnishing unfurnished service apartments to meet the diverse needs of tenants. 
-            Whether you own an unfurnished property or are looking for a hassle-free rental, we take care of 
-            everything—from furnishing the space to renting it out, ensuring that your property is ready to go.
-          </p>
-        </div>
-
-        {/* Now the "Why Choose Us" section is at the bottom */}
-        <div className="mt-16">
-  <h2 className="text-2xl font-semibold mb-8 text-center">Why Choose Us</h2>
-  <div className="grid md:grid-cols-3 gap-8">
-    {[ 
-      {
-        title: 'Personalized Service',
-        description: 'As a new and dedicated platform, we focus on providing personalized attention to each client, ensuring a tailored experience.'
-      },
-      {
-        title: 'Verified Listings',
-        description: 'We thoroughly verify all properties to ensure quality and authenticity, giving you peace of mind.'
-      },
-      {
-        title: 'Expert Support',
-        description: 'Our passionate team is available to offer expert advice and support throughout your property journey.'
-      }
-    ].map((feature, index) => (
-      <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-        <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-        <p className="text-gray-600">{feature.description}</p>
-      </div>
-    ))}
-  </div>
+  <h2 className="text-3xl font-semibold mb-6 text-gray-800">Our Core Services</h2>
+  <ul className="text-lg text-gray-600 max-w-3xl mx-auto list-inside pl-6 space-y-4 text-left">
+    <li>
+      <strong className="font-medium text-gray-800">Serviced Apartments:</strong> Fully-furnished apartments offering a perfect blend of comfort and convenience for short or long stays.
+    </li>
+    <li>
+      <strong className="font-medium text-gray-800">Property Management:</strong> Comprehensive solutions for managing your property, from tenant screening to rent collection.
+    </li>
+    <li>
+      <strong className="font-medium text-gray-800">Maintenance and Repairs:</strong> Reliable services to keep your property in top condition with prompt and professional care.
+    </li>
+    <li>
+      <strong className="font-medium text-gray-800">Furnishing and Staging:</strong> Transform unfurnished properties into appealing and functional spaces ready for tenants or buyers.
+    </li>
+  </ul>
 </div>
 
-             
-            
+
+
+        <div className="mt-16">
+          <h2 className="text-2xl font-semibold mb-8 text-center">Why Choose Us</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Tailored Solutions',
+                description: 'We provide personalized services to meet the unique needs of property owners and tenants.'
+              },
+              {
+                title: 'Quality Assurance',
+                description: 'Every property we manage is maintained to the highest standards, ensuring satisfaction and trust.'
+              },
+              {
+                title: 'Expert Team',
+                description: 'Our experienced professionals are dedicated to delivering seamless and efficient services.'
+              }
+            ].map((feature, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </main>
-      {/* Footer */}
       <Footer />
       <WhatsAppButton />
     </div>

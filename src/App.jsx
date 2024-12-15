@@ -14,13 +14,15 @@ import WhatsAppButton from './components/ui/WhatsAppButton';
 import { sampleProperties } from './data/sampleProperties';
 import { Helmet } from 'react-helmet';
 import { Home, Building } from 'lucide-react';
-
+import Services from './pages/Services'; // Import the new services page
 
 function App() {
+  // Static banner image (choose the desired image)
+  const bannerImage = '/assets/banner1.png';  // You can change this to any image you want
+
   const { filters, updateFilters, filteredProperties } = usePropertySearch(sampleProperties);
 
   const handleViewDetails = (id) => {
-    // Navigate to the property details page
     window.location.href = `/properties/${id}`;
   };
 
@@ -30,29 +32,28 @@ function App() {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="space-y-8">
-          <div className="text-center space-y-6 px-4 py-12 bg-gradient-to-r from-[#72ac4f] to-[#5f9341] rounded-lg shadow-lg">
+          <div
+            className="text-center space-y-6 px-4 py-12 rounded-lg shadow-lg"
+            style={{
+              backgroundImage: `url(${bannerImage})`,  // Static image instead of rotation
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
             <h1 className="text-5xl font-extrabold text-white sm:text-6xl">
-              Find Your Perfect Property
+              Unlock Your Property's Potential with Us
             </h1>
-            <p className="text-lg text-white max-w-3xl mx-auto">
-              Browse through our exclusive collection of premium properties for rent and sale. Find the perfect home or investment today.
+            <p className="text-lg text-white px-4 py-2 rounded max-w-3xl mx-auto">
+              Whether you're an owner seeking hassle-free management or a tenant looking for serviced apartments, we’ve got you covered.
             </p>
-            <div className="flex justify-center mt-6">
-              <button
-                onClick={() => window.scrollTo({ top: document.getElementById('properties').offsetTop, behavior: 'smooth' })}
-                className="px-8 py-3 bg-[#f4f4f4] text-[#5f9341] text-lg font-semibold rounded-lg hover:bg-[#e0e0e0] transition-colors"
-              >
-                Start Browsing
-              </button>
-            </div>
-            <div className="flex justify-center mt-8 space-x-8">
-              <div className="flex items-center text-white space-x-2">
+            <div className="flex justify-center mt-6 space-x-8">
+              <div className="flex items-center text-white px-4 py-2 rounded space-x-2">
                 <Home className="h-6 w-6" />
-                <span className="text-lg">Browse from exclusive listings</span>
+                <span className="text-lg">For Property Owners</span>
               </div>
-              <div className="flex items-center text-white space-x-2">
+              <div className="flex items-center text-white px-4 py-2 rounded space-x-2">
                 <Building className="h-6 w-6" />
-                <span className="text-lg">Find your dream home or investment</span>
+                <span className="text-lg">For Tenants</span>
               </div>
             </div>
           </div>
@@ -106,11 +107,11 @@ function Head() {
 }
 
 function PropertyDetailsPage() {
-  const { id } = useParams(); // Get the id from URL parameters
-  const property = sampleProperties.find((p) => p.id === id); // Find the property by id
+  const { id } = useParams();
+  const property = sampleProperties.find((p) => p.id === id);
 
   const handleClose = () => {
-    window.history.back(); // Close and go back to the previous page
+    window.history.back();
   };
 
   if (!property) {
@@ -129,7 +130,8 @@ function AppWithRouting() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/properties" element={<Properties />} />
-        <Route path="/properties/:id" element={<PropertyDetailsPage />} /> {/* Dynamic route for PropertyDetails */}
+        <Route path="/properties/:id" element={<PropertyDetailsPage />} />
+        <Route path="/services" element={<Services />} /> {/* Add Services page */}
       </Routes>
     </Router>
   );

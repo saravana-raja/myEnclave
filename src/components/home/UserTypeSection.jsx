@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Home, Building } from 'lucide-react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
@@ -19,37 +18,24 @@ export const UserTypeSection = () => {
           <div className="p-4 bg-[#f0f7ec] rounded-full">
             <Building className="h-8 w-8 text-[#72ac4f]" />
           </div>
-          <h3 className="text-2xl font-semibold">For Property Owners</h3>
-
+          <h3 className="text-2xl font-semibold">Property Management Services</h3>
           <p className="text-gray-600">
-            <strong>List your property and reach thousands of potential tenants or buyers. Easy management and quick responses.</strong>
+            <strong>Comprehensive property management services to ensure your property is well-maintained and profitable.</strong>
           </p>
-
-          <p className="text-gray-600">
-            Own a flat and struggling to rent it?
-          </p>
-          <p className="text-gray-600">
-            We are here to take over with above-market rent
-          </p>
-          <p className="text-gray-600">
-            Assured rental
-          </p>
-
-          <p className="text-gray-600">
-            Free Maintenance
-          </p>
-          <p className="text-gray-600">
-            Contract from 2 to 10 years
-          </p>
+          <p className="text-gray-600">&bull; Owning a flat and struggling to rent it?</p>
+          <p className="text-gray-600">&bull; We handle everything from tenant search to property maintenance.</p>
+          <p className="text-gray-600">&bull; Assured rental and free maintenance</p>
+          <p className="text-gray-600">&bull; Hassle-free Management</p>
+          <p className="text-gray-600">&bull; Long-term contracts for peace of mind</p>
 
           {/* Change the anchor link to open WhatsApp */}
           <a
-            href="https://wa.me/919787518289?text=Hi, I am interested in listing my property with your service."
+            href="https://wa.me/919787518289?text=Hi, I am interested in renting out my property and would like more information about your services."
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 text-[#72ac4f] font-semibold hover:text-[#5f9341] transition-colors"
           >
-            List Your Property →
+            Contact Us →
           </a>
         </div>
       </div>
@@ -59,30 +45,20 @@ export const UserTypeSection = () => {
           <div className="p-4 bg-[#f0f7ec] rounded-full">
             <Home className="h-8 w-8 text-[#72ac4f]" />
           </div>
-          <h3 className="text-2xl font-semibold">For Tenants</h3>
+          <h3 className="text-2xl font-semibold">Serviced Apartments</h3>
           <p className="text-gray-600">
-            <strong>Find your perfect service apartment. Browse through our extensive collection of apartments and houses.</strong>
+            <strong>Discover premium serviced apartments tailored to your needs, offering comfort and convenience.</strong>
           </p>
-          <p className="text-gray-600">
-            Struggling to find a stay?
-          </p>
-          <p className="text-gray-600">
-            We are here to help you find a good service apartment
-          </p>
-          <p className="text-gray-600">
-            Affordable rent
-          </p>
-          <p className="text-gray-600">
-            Various properties as per your needs
-          </p>
-          <p className="text-gray-600">
-            Prime locations
-          </p>
+          <p className="text-gray-600">&bull; Struggling to find a stay?</p>
+          <p className="text-gray-600">&bull; We are here to help you with finding great service apartments</p>
+          <p className="text-gray-600">&bull; Prime locations with great accessibility</p>
+          <p className="text-gray-600">&bull; Affordable and flexible rent options</p>
+          <p className="text-gray-600">&bull; Ideal for short and long-term stays</p>
           <button
             onClick={handleStartBrowsing} // Add the handler for the button
             className="mt-4 text-[#72ac4f] font-semibold hover:text-[#5f9341] transition-colors"
           >
-            Start Browsing →
+            Browse Apartments →
           </button>
         </div>
       </div>
